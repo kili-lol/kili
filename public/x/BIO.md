@@ -18,10 +18,10 @@ Robinhood 4663
 ## Website
 https://www.kili.lol
 
-## Assets
-- Profile: `logo.png` (400×400) or `logo-512.png`
-- Header: `banner.png` (1500×500)
-- Article cover: `article-cover.png` (1500×600, 5:2)
+## LetsCash
+Square PFP for letscash.fun: `/letscash.png` (1024×1024, acid corners).
+Edge-to-edge: `/letscash-full.png`
+
 
 ## Pinned post
 ```

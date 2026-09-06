@@ -1,0 +1,42 @@
+{
+  "pal": {
+    ".": "#08060a",
+    "X": "#1a1008",
+    "A": "#e2c044",
+    "C": "#ffe66d",
+    "E": "#ffe66d",
+    "P": "#08060a",
+    "N": "#ff5a4a",
+    "M": "#08060a",
+    "S": "#8a6a14",
+    "T": "#e2c044",
+    "L": "#8a6a14",
+    "H": "#1a1008",
+    "G": "#ffe66d",
+    "K": "#141018",
+    "R": "#ff5a4a",
+    "Y": "#a5fa00",
+    "W": "#e8ede3",
+    "D": "#3dffc8"
+  },
+  "rows": [
+    "..GGG...GG...GGG..",
+    "..XSSG......GSSX..",
+    "..XSSX......XSSX..",
+    ".XAAAAAAAAAAAAAAX.",
+    "XAAAAAAADAAAAAAAAX",
+    "XAAAAAAAAAAAAAAAAX",
+    "XKKKKKKKKKKKKKKKKX",
+    "XKRYYAAAAAAAAYYRKR",
+    "XKKKKKKKKKKKKKKKKX",
+    "XAAAAAAADANAAAAAAX",
+    "XAAAAAAAM..MAAAAAX",
+    "XAAAAAAAAAAAAAAAAX",
+    ".XAAAAAAAAAAAAAAX.",
+    "..XXXXXXXXXXXXXX..",
+    ".XAAAAAAAAAAAAAAX.",
+    "XAAAACWCDACWCAAAAX",
+    "XAAAAAAAAAAAAAAAAX",
+    "XAAAAX......XAAAAX"
+  ]
+}

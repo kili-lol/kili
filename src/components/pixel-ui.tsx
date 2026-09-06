@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
+import logoFace from "@/lib/logo-face.json";
 
 function Sprite({
   rows,
@@ -35,30 +36,9 @@ function Sprite({
 const INK = { ".": "", x: "#a5fa00", k: "#070807", w: "#e8ede3", d: "#3dffc8", r: "#ff5a4a", g: "#e2c044" };
 
 export function PixelLogo({ className }: { className?: string }) {
+  const pal = Object.fromEntries(Object.entries(logoFace.pal).filter(([k]) => k !== "."));
   return (
-    <Sprite
-      className={cn("size-8", className)}
-      title="KILI"
-      pal={INK}
-      rows={[
-        "..x....x........",
-        ".xxx..xxx.......",
-        "xkkx..xkkx......",
-        "xkkx..xkkx......",
-        "xkkkkkkkkx......",
-        "xkkxkkxkkx......",
-        "xkkkkkkkkx......",
-        ".xkkkkkkx.......",
-        "..xkkkkx........",
-        ".xkkkkkkx.......",
-        "xkkx..xkkx......",
-        "xkkx..xkkx......",
-        ".xxx..xxx.......",
-        "..xx..xx........",
-        "..x....x........",
-        "................",
-      ]}
-    />
+    <Sprite className={cn("size-8", className)} title="KILI" pal={pal} rows={logoFace.rows} />
   );
 }
 
