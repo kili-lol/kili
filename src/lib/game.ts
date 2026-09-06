@@ -332,7 +332,7 @@ export function mintLabCat(traits: LabTraits): Specimen {
 
 export const LINKS = {
   x: "https://x.com/kili_RH",
-  github: "https://github.com/kili-lol",
+  github: "https://github.com/kili-lol/kili",
   site: "https://www.kili.lol",
   pair: "https://pair.fun/launch",
   pairDocs: "https://pair.fun/docs",
@@ -347,5 +347,5 @@ export const SOCIALS = {
   website: "https://www.kili.lol",
   twitter: "https://x.com/kili_RH",
   telegram: "",
-  github: "https://github.com/kili-lol",
+  github: "https://github.com/kili-lol/kili",
 };
