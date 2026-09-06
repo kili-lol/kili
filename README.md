@@ -28,7 +28,7 @@ Organs: **head, body, tail, legs**. Named lines: Phantom, Rot, Scale, Laser, Vei
 
 Deploy order — do not reverse:
 
-1. **Vat** — no constructor. Confirm `receive()` on Blockscout.
+1. **Vat** — `0x922769007b1047fbe25556599dbc265639b8d481` (no constructor). Confirm `receive()` on Blockscout.
 2. **Nursery(vat)** — constructor is the Vat address only.
 3. `nursery.vat() == Vat`. `mixFee` is `0.0003 ether`. Call `socials()` on both Vat and Nursery (name, ticker, description, website, twitter, github). Vat also exposes `description()` / `website()` / `twitter()` / `github()`.
 4. **$KILI** on PAIR V2 last. PAIR mints its own 1B `PairToken`. It does not wrap Nursery.

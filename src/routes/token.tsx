@@ -45,13 +45,24 @@ function TokenPage() {
 
       <div className="mt-10 grid gap-4 md:grid-cols-3">
         {[
-          ["Vat", LINKS.vat || "after Remix"],
-          ["Nursery", LINKS.nursery || "Nursery(vat)"],
-          ["$KILI", ca || "PAIR PairToken"],
-        ].map(([k, v]) => (
+          ["Vat", LINKS.vat, `${LINKS.explorer}/address/${LINKS.vat}`],
+          ["Nursery", LINKS.nursery || "Nursery(vat) — next", LINKS.nursery ? `${LINKS.explorer}/address/${LINKS.nursery}` : ""],
+          ["$KILI", ca || "PAIR / LetsCash after launch", ca ? `${LINKS.explorer}/address/${ca}` : ""],
+        ].map(([k, v, href]) => (
           <div key={k} className="border border-line bg-panel p-4">
             <div className="font-mono text-[8px] text-mute">{k}</div>
-            <div className="mt-2 truncate font-mono text-[9px] text-fg">{v}</div>
+            {href ? (
+              <a
+                className="mt-2 block truncate font-mono text-[9px] text-acid hover:underline"
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {v}
+              </a>
+            ) : (
+              <div className="mt-2 truncate font-mono text-[9px] text-fg">{v}</div>
+            )}
           </div>
         ))}
       </div>
