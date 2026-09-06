@@ -135,7 +135,11 @@ function TokenPage() {
       </section>
 
       <p className="mt-10 font-mono text-[8px] leading-relaxed text-mute">
-        socials · {SOCIALS.website} · explorer {LINKS.explorer.replace("https://", "")}
+        socials · {SOCIALS.website} · @{SOCIALS.handle} · {SOCIALS.github.replace("https://", "")} · explorer{" "}
+        {LINKS.explorer.replace("https://", "")}
+      </p>
+      <p className="mt-3 font-mono text-[8px] leading-relaxed text-mute">
+        ON-CHAIN · VAT.SOCIALS() · NURSERY.SOCIALS() · NAME / TICKER / DESCRIPTION / WEBSITE / TWITTER / GITHUB
       </p>
     </Shell>
   );

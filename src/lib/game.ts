@@ -343,7 +343,14 @@ export const LINKS = {
 };
 
 export const SOCIALS = {
-  description: "Mutate Your Cats. Four organs. Keep the wrong ones.",
+  name: "KILI",
+  ticker: "$KILI",
+  unit: "KIT",
+  handle: "kili_RH",
+  description:
+    "KILI. Mutate Your Cats. A cat is four organs. Mix two. Fifty-fifty. Six percent mutant. Coat mismatch: chimera. Keep the wrong ones. Ticker $KILI. Nursery unit KIT.",
+  bio: "Mutate Your Cats. Four organs. 50/50 mix. 6% mutant. Coat mismatch: chimera. Keep the wrong ones. $KILI",
+  slogan: "Keep the wrong ones.",
   website: "https://www.kili.lol",
   twitter: "https://x.com/kili_RH",
   telegram: "",

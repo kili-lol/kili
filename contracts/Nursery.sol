@@ -5,6 +5,9 @@ pragma solidity ^0.8.24;
 /// @notice Four organs, 50/50 mix, 6% mutant, coat mismatch = chimera.
 ///         Mix fee is forwarded to The Vat. Ticker $KILI is a separate PAIR V2 token.
 contract Nursery {
+    string public constant NAME = "Nursery";
+    string public constant TICKER = "KILI";
+    string public constant UNIT = "KIT";
     address public immutable vat;
     uint256 public constant mixFee = 0.0003 ether;
     uint256 public nextId = 1;
@@ -89,17 +92,37 @@ contract Nursery {
         emit FounderMinted(id, msg.sender, founder);
     }
 
+    function description() public pure returns (string memory) {
+        return
+            "KILI Nursery. Mutate Your Cats. Four organs, 50/50 mix, 6% mutant, coat mismatch = chimera. Mix fee 0.0003 ETH forwards to The Vat. Ticker $KILI is a separate PAIR V2 token. Nursery unit is KIT. Keep the wrong ones. https://www.kili.lol";
+    }
+
+    function website() public pure returns (string memory) {
+        return "https://www.kili.lol";
+    }
+
+    function twitter() public pure returns (string memory) {
+        return "https://x.com/kili_RH";
+    }
+
+    function github() public pure returns (string memory) {
+        return "https://github.com/kili-lol/kili";
+    }
+
     function socials()
         external
         pure
-        returns (string memory description, string memory website, string memory twitter, string memory github)
+        returns (
+            string memory name_,
+            string memory ticker_,
+            string memory unit_,
+            string memory description_,
+            string memory website_,
+            string memory twitter_,
+            string memory github_
+        )
     {
-        return (
-            "Mutate Your Cats. Four organs. Keep the wrong ones.",
-            "https://www.kili.lol",
-            "https://x.com/kili_RH",
-            "https://github.com/kili-lol/kili"
-        );
+        return (NAME, TICKER, UNIT, description(), website(), twitter(), github());
     }
 
     function _pick(uint8 a, uint8 b, bytes32 entropy, uint8 slot) internal pure returns (uint8) {

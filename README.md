@@ -30,7 +30,7 @@ Deploy order — do not reverse:
 
 1. **Vat** — no constructor. Confirm `receive()` on Blockscout.
 2. **Nursery(vat)** — constructor is the Vat address only.
-3. `nursery.vat() == Vat`. `mixFee` is `0.0003 ether`. Call `socials()`.
+3. `nursery.vat() == Vat`. `mixFee` is `0.0003 ether`. Call `socials()` on both Vat and Nursery (name, ticker, description, website, twitter, github). Vat also exposes `description()` / `website()` / `twitter()` / `github()`.
 4. **$KILI** on PAIR V2 last. PAIR mints its own 1B `PairToken`. It does not wrap Nursery.
 
 Nursery constructor arg (ABI):
@@ -91,3 +91,13 @@ Keep the wrong ones.
 https://www.kili.lol
 CA 0x…
 ```
+
+## X
+
+Handle `@kili_RH`. Kit in `public/x/`.
+
+- Bio (160): `Mutate Your Cats. Four organs. 50/50 mix. 6% mutant. Coat mismatch: chimera. Keep the wrong ones. $KILI`
+- Profile `public/x/logo.png` 400×400
+- Banner `public/x/banner.png` 1500×500
+- Article cover `public/x/article-cover.png` 1500×600 (5:2)
+- Lore: `/lore`

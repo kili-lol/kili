@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LabRouteImport } from './routes/lab'
+import { Route as LoreRouteImport } from './routes/lore'
 import { Route as PitRouteImport } from './routes/pit'
 import { Route as TokenRouteImport } from './routes/token'
 
@@ -22,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const LabRoute = LabRouteImport.update({
   id: '/lab',
   path: '/lab',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoreRoute = LoreRouteImport.update({
+  id: '/lore',
+  path: '/lore',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PitRoute = PitRouteImport.update({
@@ -38,12 +44,14 @@ const TokenRoute = TokenRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/lab': typeof LabRoute
+  '/lore': typeof LoreRoute
   '/pit': typeof PitRoute
   '/token': typeof TokenRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/lab': typeof LabRoute
+  '/lore': typeof LoreRoute
   '/pit': typeof PitRoute
   '/token': typeof TokenRoute
 }
@@ -51,20 +59,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/lab': typeof LabRoute
+  '/lore': typeof LoreRoute
   '/pit': typeof PitRoute
   '/token': typeof TokenRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/lab' | '/pit' | '/token'
+  fullPaths: '/' | '/lab' | '/lore' | '/pit' | '/token'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/lab' | '/pit' | '/token'
-  id: '__root__' | '/' | '/lab' | '/pit' | '/token'
+  to: '/' | '/lab' | '/lore' | '/pit' | '/token'
+  id: '__root__' | '/' | '/lab' | '/lore' | '/pit' | '/token'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   LabRoute: typeof LabRoute
+  LoreRoute: typeof LoreRoute
   PitRoute: typeof PitRoute
   TokenRoute: typeof TokenRoute
 }
@@ -83,6 +93,13 @@ declare module '@tanstack/react-router' {
       path: '/lab'
       fullPath: '/lab'
       preLoaderRoute: typeof LabRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lore': {
+      id: '/lore'
+      path: '/lore'
+      fullPath: '/lore'
+      preLoaderRoute: typeof LoreRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pit': {
@@ -105,6 +122,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   LabRoute: LabRoute,
+  LoreRoute: LoreRoute,
   PitRoute: PitRoute,
   TokenRoute: TokenRoute,
 }
