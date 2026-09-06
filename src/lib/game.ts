@@ -339,7 +339,7 @@ export const LINKS = {
   explorer: "https://robinhoodchain.blockscout.com",
   ca: "",
   vat: "0x922769007b1047fbe25556599dbc265639b8d481",
-  nursery: "",
+  nursery: "0xcE0133b3d373bAFa570ABc127614dbEac8c590E3",
 };
 
 export const SOCIALS = {
