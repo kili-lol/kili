@@ -100,8 +100,7 @@ function Home() {
           <div>
             <h2 className="font-mono text-[12px] leading-relaxed">3% CREATOR FEE</h2>
             <p className="mt-3 max-w-lg font-mono text-[8px] leading-relaxed text-mute">
-              PAIR V2. UNI V4. LP LOCKED. 1B ONCE. MIX FEE 0.0003 ETH TO THE VAT. NEVER AN EOA.
-              LAUNCH ON PAIR.FUN. CUSTOM QUOTE EMPTY.
+              1B ONCE. LP LOCKED. MIX FEE 0.0003 ETH TO THE VAT.
             </p>
           </div>
           <Link to="/token">
