@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #070807;
+  --color-ink: #070807;
+  --color-elevated: #101210;
+  --color-panel: #141614;
+  --color-fg: #e8ede3;
+  --color-mute: #7d8476;
+  --color-line: #22261f;
+  --color-acid: #a5fa00;
+  --color-acid-dim: #8ad600;
+  --color-warn: #ff5a4a;
+  --color-cyan: #3dffc8;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --text-3xs: 0.625rem;
+  --text-2xs: 0.6875rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+@layer base {
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@keyframes kili-glitch {
+  0%,
+  89%,
+  100% {
+    clip-path: none;
+    transform: none;
+  }
+  90% {
+    clip-path: polygon(0 18%, 100% 18%, 100% 23%, 0 23%);
+    transform: translateX(-4px);
+  }
+  93% {
+    clip-path: polygon(0 58%, 100% 58%, 100% 63%, 0 63%);
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
