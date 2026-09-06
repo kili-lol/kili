@@ -337,7 +337,7 @@ export const LINKS = {
   pair: "https://pair.fun/launch",
   pairDocs: "https://pair.fun/docs",
   explorer: "https://robinhoodchain.blockscout.com",
-  ca: "",
+  ca: "0xc4185f32bf8795a0d37b55e3772edcb02bf3e0cc",
   vat: "0x922769007b1047fbe25556599dbc265639b8d481",
   nursery: "0xcE0133b3d373bAFa570ABc127614dbEac8c590E3",
 };
