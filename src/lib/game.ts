@@ -121,7 +121,7 @@ export const FOUNDERS: Founder[] = [
     id: "beam",
     name: "Beam",
     line: "BEAM",
-    src: "/cats/volt.png",
+    src: "/cats/beam.png",
     coat: "neon",
     blurb: "Visor fire. Orange vest. Named head.",
   },

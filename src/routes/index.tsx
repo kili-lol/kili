@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { CornerFrame, Shell } from "@/components/shell";
 import { CHAIN_ID, FEE, FEE_SHARE, FOUNDERS, LINKS } from "@/lib/game";
+import { FounderPixel } from "@/components/pixel-cat";
 import { useLab } from "@/store/lab";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -48,8 +49,8 @@ function Home() {
             </div>
           </dl>
         </div>
-        <CornerFrame className="aspect-square max-h-[520px] overflow-hidden border border-line bg-elevated">
-          <img src="/cats/phantom.png" alt="Phantom, named void line" className="h-full w-full object-cover" />
+        <CornerFrame className="aspect-square max-h-[520px] overflow-hidden border border-line bg-ink">
+          <FounderPixel id="phantom" className="h-full w-full" />
         </CornerFrame>
       </section>
 
@@ -60,13 +61,9 @@ function Home() {
         </div>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7">
           {FOUNDERS.map((f) => (
-            <figure key={f.id} className="group border border-line bg-elevated">
+            <figure key={f.id} className="group border border-line bg-ink">
               <div className="aspect-square overflow-hidden">
-                <img
-                  src={f.src}
-                  alt={f.name}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                />
+                <FounderPixel id={f.id} className="h-full w-full" />
               </div>
               <figcaption className="px-2 py-2">
                 <div className="font-display text-sm">{f.name}</div>

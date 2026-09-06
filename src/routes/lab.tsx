@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { CornerFrame, Shell } from "@/components/shell";
 import { SpecimenArt } from "@/components/specimen-art";
-import { MutantCatSVG } from "@/components/mutant-svg";
+import { PixelCat } from "@/components/pixel-cat";
 import {
   LAB_APPEND,
   LAB_AURA,
@@ -273,10 +273,8 @@ function GenomeLab() {
           Mint to nursery
         </Button>
       </aside>
-      <CornerFrame className="flex min-h-[420px] items-center justify-center border border-line bg-ink p-6">
-        <div className="h-[380px] w-[320px]">
-          <MutantCatSVG traits={traits} />
-        </div>
+      <CornerFrame className="flex min-h-[420px] items-center justify-center border border-line bg-ink">
+        <PixelCat specimen={mintLabCat(traits)} className="h-full w-full max-h-[520px]" />
       </CornerFrame>
     </div>
   );
