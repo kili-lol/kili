@@ -6,9 +6,9 @@ export const PIXEL_SIZE = 24;
 type Sprite = { pal: Record<string, string>; rows: string[] };
 const SPRITES = data as Record<string, Sprite>;
 
-const HEAD = { x0: 0, y0: 0, x1: 23, y1: 11 };
-const BODY = { x0: 2, y0: 12, x1: 16, y1: 18 };
-const TAIL = { x0: 17, y0: 12, x1: 23, y1: 18 };
+const HEAD = { x0: 0, y0: 0, x1: 23, y1: 13 };
+const BODY = { x0: 2, y0: 14, x1: 18, y1: 18 };
+const TAIL = { x0: 19, y0: 14, x1: 23, y1: 19 };
 const LEGS = { x0: 0, y0: 19, x1: 23, y1: 23 };
 
 const REGION: Record<Organ, { x0: number; y0: number; x1: number; y1: number }> = {
