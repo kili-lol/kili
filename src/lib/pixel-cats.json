@@ -310,5 +310,53 @@
       "...XXLLXX..XXLLXX.......",
       "....XXXX....XXXX........"
     ]
+  },
+  "wrex": {
+    "pal": {
+      ".": "#08060a",
+      "X": "#1a1008",
+      "A": "#e2c044",
+      "B": "#8a6a14",
+      "C": "#ffe66d",
+      "D": "#3dffc8",
+      "E": "#ffe66d",
+      "P": "#08060a",
+      "N": "#ff5a4a",
+      "M": "#08060a",
+      "T": "#e2c044",
+      "L": "#8a6a14",
+      "G": "#ffe66d",
+      "K": "#141018",
+      "R": "#ff5a4a",
+      "Y": "#a5fa00",
+      "W": "#e8ede3",
+      "I": "#a5fa00"
+    },
+    "rows": [
+      ".....G..G..GG..G..G.....",
+      ".....GGGGGGGGGGGGGG.....",
+      ".....XGAX..XAAX..G......",
+      "..I.XAAAAAAAAAAX.....I..",
+      "...XAAAAAAADAAAAX.......",
+      "...XAAAAAAADAAAAX.......",
+      "...XAKKKKKKKKKKKKKK.....",
+      "RRRRRKRRYYAEPPYYRRKRRRRR",
+      "...XAKKKKKKKKKKKKKK.....",
+      "...XAAAAANNDAAAAX.......",
+      "...XAAAAAMMDAAAAX.......",
+      "II..XAAAAAAAAAAX......II",
+      "IX.XAAAAAAADAAAAX.....XI",
+      "IIXAAACWWWCDACWWWX....II",
+      "I.XAACCCCCCDACCAAX.XX..I",
+      "..XAACCWWCCDACCWWXTAABX.",
+      "..XAAACCCCCDACAAAXTAAAX.",
+      "..XAAAAAAAADAAAAAXTAAX..",
+      "..XAAAAAAAAAAAAAAXXAX...",
+      "...XAAAAX..XAAAAXX......",
+      ".I.XXLLXX..XXLLXX.....I.",
+      "...XLLLLGG.XLLGGX.......",
+      "...XXLLXX..XXLLXX.......",
+      "....XXXX....XXXX........"
+    ]
   }
 }
