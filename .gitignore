@@ -18,3 +18,4 @@ AGENTS.project.md
 .DS_Store
 coverage
 .cache
+__pycache__/
