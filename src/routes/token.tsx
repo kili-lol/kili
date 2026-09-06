@@ -19,11 +19,11 @@ function TokenPage() {
 
   return (
     <Shell>
-      <p className="font-mono text-2xs uppercase tracking-[0.24em] text-acid">
-        PAIR V2 · Uniswap V4 · chain {CHAIN_ID}
+      <p className="font-mono text-[8px] text-acid">
+        PAIR V2 · UNISWAP V4 · CHAIN {CHAIN_ID}
       </p>
-      <h1 className="mt-2 font-display text-4xl md:text-6xl">$KILI</h1>
-      <p className="mt-4 max-w-xl text-mute">
+      <h1 className="mt-3 font-mono text-[22px] leading-relaxed md:text-[28px]">$KILI</h1>
+      <p className="mt-4 max-w-xl font-sans text-[22px] leading-tight text-mute">
         {SOCIALS.description} Nursery unit is KIT. Ticker is $KILI. One billion into locked LP. Developer buy
         empty means 0 bag.
       </p>
@@ -50,20 +50,20 @@ function TokenPage() {
           ["$KILI", ca || "PAIR PairToken"],
         ].map(([k, v]) => (
           <div key={k} className="border border-line bg-panel p-4">
-            <div className="font-mono text-2xs uppercase tracking-widest text-mute">{k}</div>
-            <div className="mt-2 truncate font-mono text-xs text-fg">{v}</div>
+            <div className="font-mono text-[8px] text-mute">{k}</div>
+            <div className="mt-2 truncate font-mono text-[9px] text-fg">{v}</div>
           </div>
         ))}
       </div>
 
-      <h2 className="mt-12 font-display text-2xl">Fee sharing · 3%</h2>
-      <p className="mt-2 max-w-xl text-sm text-mute">
+      <h2 className="mt-12 font-mono text-[12px] leading-relaxed">FEE SHARING · 3%</h2>
+      <p className="mt-2 max-w-xl font-sans text-[20px] leading-tight text-mute">
         PAIR mode: Sharing. Recipients total 10000 bps of the creator fee. Mix fee is separate: 0.0003 ETH
         into The Vat.
       </p>
       <div className="mt-6 overflow-x-auto border border-line">
         <table className="w-full min-w-[520px] text-left text-sm">
-          <thead className="bg-elevated font-mono text-2xs uppercase tracking-widest text-mute">
+          <thead className="bg-elevated font-mono text-[8px] text-mute">
             <tr>
               <th className="px-4 py-3">Slice</th>
               <th className="px-4 py-3">Of swap</th>
@@ -90,16 +90,16 @@ function TokenPage() {
         </table>
       </div>
 
-      <h2 className="mt-12 font-display text-2xl">Markets · 10000 bps</h2>
-      <p className="mt-2 max-w-xl text-sm text-mute">
+      <h2 className="mt-12 font-mono text-[12px] leading-relaxed">MARKETS · 10000 BPS</h2>
+      <p className="mt-2 max-w-xl font-sans text-[20px] leading-tight text-mute">
         Catalog only. Do not paste Vat, Nursery, or $KILI into custom quote discovery.
       </p>
       <div className="mt-6 grid gap-px bg-line sm:grid-cols-4">
         {PAIR_MARKETS.map((m) => (
           <div key={m.quote} className="bg-bg p-4">
-            <div className="font-display text-lg">{m.quote}</div>
-            <div className="mt-1 font-mono text-acid">{m.pct}%</div>
-            <div className="mt-1 font-mono text-3xs uppercase tracking-widest text-mute">
+            <div className="font-mono text-[12px]">{m.quote}</div>
+            <div className="mt-1 font-mono text-[12px] text-acid">{m.pct}%</div>
+            <div className="mt-1 font-mono text-[8px] text-mute">
               {m.bps} bps · {m.role}
             </div>
           </div>
@@ -108,8 +108,8 @@ function TokenPage() {
 
       <section className="mt-12 grid gap-4 md:grid-cols-2">
         <article className="border border-line bg-panel p-5">
-          <h2 className="font-display text-xl">Launch order</h2>
-          <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm text-mute">
+          <h2 className="font-mono text-[11px] leading-relaxed">LAUNCH ORDER</h2>
+          <ol className="mt-3 list-decimal space-y-2 pl-5 font-sans text-[20px] leading-tight text-mute">
             <li>Name KILI, slogan, X / GitHub, square logo — ticker last.</li>
             <li>www.kili.lol canonical. Apex 308 → www. OG 1200×630 from day one.</li>
             <li>Vat first (receive ETH). Then Nursery(vat) only. mixFee 0.0003 ETH.</li>
@@ -122,8 +122,8 @@ function TokenPage() {
           </ol>
         </article>
         <article className="border border-line bg-panel p-5">
-          <h2 className="font-display text-xl">Do not</h2>
-          <ul className="mt-3 space-y-2 text-sm text-mute">
+          <h2 className="font-mono text-[11px] leading-relaxed">DO NOT</h2>
+          <ul className="mt-3 space-y-2 font-sans text-[20px] leading-tight text-mute">
             <li>Paste Vat or Nursery into PAIR custom quote.</li>
             <li>Use LetsCash SDK — it does not speak PAIR V4.</li>
             <li>Mint after launch. LP is locked in PairV4Locker.</li>
@@ -134,7 +134,7 @@ function TokenPage() {
         </article>
       </section>
 
-      <p className="mt-10 font-mono text-2xs uppercase tracking-[0.16em] text-mute">
+      <p className="mt-10 font-mono text-[8px] leading-relaxed text-mute">
         socials · {SOCIALS.website} · explorer {LINKS.explorer.replace("https://", "")}
       </p>
     </Shell>

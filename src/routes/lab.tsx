@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { CornerFrame, Shell } from "@/components/shell";
 import { SpecimenArt } from "@/components/specimen-art";
 import { PixelCat } from "@/components/pixel-cat";
+import { PixelEmpty } from "@/components/pixel-ui";
 import {
   LAB_APPEND,
   LAB_AURA,
@@ -54,8 +55,8 @@ function LabPage() {
     <Shell>
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="font-mono text-2xs uppercase tracking-[0.24em] text-acid">Nursery / KIT</p>
-          <h1 className="mt-1 font-display text-4xl">The Vat</h1>
+          <p className="font-mono text-[8px] text-acid">NURSERY / KIT</p>
+          <h1 className="mt-2 font-mono text-[18px] leading-relaxed md:text-[22px]">THE VAT</h1>
         </div>
         <div className="flex gap-1 border border-line p-1">
           {(["mix", "genome"] as const).map((t) => (
@@ -63,7 +64,7 @@ function LabPage() {
               key={t}
               onClick={() => setTab(t)}
               className={cn(
-                "h-9 px-4 font-mono text-2xs uppercase tracking-widest",
+                "h-9 px-4 font-mono text-[8px] uppercase",
                 tab === t ? "bg-acid text-ink" : "text-mute",
               )}
             >
@@ -78,11 +79,11 @@ function LabPage() {
           <div className="grid gap-4 md:grid-cols-[1fr_140px_1fr]">
             <ParentPicker label="Parent A" selected={a} nursery={nursery} onPick={(id) => setMix("left", id)} />
             <div className="flex flex-col items-center justify-center gap-3 py-4">
-              <div className="font-mono text-3xs uppercase tracking-widest text-mute">Fee {MIX_FEE_ETH} ETH</div>
+              <div className="font-mono text-[8px] text-mute">FEE {MIX_FEE_ETH} ETH</div>
               <Button size="lg" onClick={onMix} disabled={!a || !b || a.id === b.id}>
                 MIX
               </Button>
-              <div className="font-mono text-3xs uppercase tracking-widest text-mute">Vat {vat.toFixed(3)}</div>
+              <div className="font-mono text-[8px] text-mute">VAT {vat.toFixed(3)}</div>
             </div>
             <ParentPicker label="Parent B" selected={b} nursery={nursery} onPick={(id) => setMix("right", id)} />
           </div>
@@ -91,16 +92,16 @@ function LabPage() {
             <CornerFrame className="mt-8 border border-line bg-panel p-4">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div>
-                  <p className="font-mono text-2xs uppercase tracking-widest text-acid">
+                  <p className="font-mono text-[8px] text-acid">
                     {flash.chimera ? "Coat mismatch — chimera" : flash.mutant ? `Mutant · ${flash.line}` : "Mix settled"}
                   </p>
-                  <h2 className="font-display text-2xl">{flash.name}</h2>
+                  <h2 className="font-mono text-[12px] leading-relaxed">{flash.name}</h2>
                 </div>
                 <OrganRow cat={flash} />
               </div>
               <div className="mt-4 grid gap-4 sm:grid-cols-[220px_1fr]">
                 <SpecimenArt specimen={flash} className="aspect-square" />
-                <p className="self-center text-sm leading-relaxed text-mute">
+                <p className="self-center font-sans text-[20px] leading-tight text-mute">
                   Parents stay in the nursery. The child is a new kit. Six percent of mixes hit a named line.
                   Wrong coat stays on the card. Keep it.
                 </p>
@@ -108,7 +109,7 @@ function LabPage() {
             </CornerFrame>
           )}
 
-          <h2 className="mt-12 font-display text-xl">Nursery</h2>
+          <h2 className="mt-12 font-mono text-[12px]">NURSERY</h2>
           <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">
             {nursery.map((c) => (
               <button
@@ -131,8 +132,8 @@ function LabPage() {
                   <SpecimenArt specimen={c} className="aspect-square" />
                 </div>
                 <div className="px-2 py-2">
-                  <div className="truncate font-display text-sm">{c.name}</div>
-                  <div className="font-mono text-3xs uppercase tracking-widest text-mute">
+                  <div className="truncate font-mono text-[9px]">{c.name}</div>
+                  <div className="font-mono text-[8px] text-mute">
                     G{c.generation}
                     {c.chimera ? " · chimera" : ""}
                     {c.mutant ? " · mutant" : ""}
@@ -163,13 +164,13 @@ function ParentPicker({
 }) {
   return (
     <div className="border border-line bg-panel p-3">
-      <div className="mb-2 font-mono text-2xs uppercase tracking-widest text-mute">{label}</div>
+      <div className="mb-2 font-mono text-[8px] text-mute">{label}</div>
       <CornerFrame className="aspect-square overflow-hidden bg-ink">
         {selected ? <SpecimenArt specimen={selected} className="h-full" /> : <EmptyVat />}
       </CornerFrame>
       {selected && (
         <div className="mt-3 flex items-center justify-between">
-          <span className="font-display">{selected.name}</span>
+          <span className="font-mono text-[10px]">{selected.name}</span>
           <OrganRow cat={selected} />
         </div>
       )}
@@ -195,7 +196,7 @@ function OrganRow({ cat }: { cat: Specimen }) {
   return (
     <div className="flex gap-1">
       {ORGANS.map((o) => (
-        <span key={o} className="border border-line px-1.5 py-0.5 font-mono text-3xs uppercase text-mute">
+        <span key={o} className="border border-line px-1.5 py-0.5 font-mono text-[7px] uppercase text-mute">
           {o[0]}:{cat.organs[o].slice(0, 3)}
           {cat.boosts[o] ? `+${cat.boosts[o]}` : ""}
         </span>
@@ -206,8 +207,8 @@ function OrganRow({ cat }: { cat: Specimen }) {
 
 function EmptyVat() {
   return (
-    <div className="grid h-full place-items-center font-mono text-2xs uppercase tracking-widest text-mute">
-      Select a kit
+    <div className="grid h-full place-items-center p-6">
+      <PixelEmpty />
     </div>
   );
 }
@@ -238,7 +239,7 @@ function GenomeLab() {
   return (
     <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
       <aside className="border border-line bg-panel p-4">
-        <p className="font-mono text-2xs uppercase tracking-widest text-mute">Mutation level</p>
+        <p className="font-mono text-[8px] text-mute">MUTATION</p>
         <div className="mt-2 flex items-center justify-between font-mono text-sm text-acid">
           <span>{traits.mutationLevel}%</span>
         </div>
@@ -252,14 +253,14 @@ function GenomeLab() {
         />
         {rows.map((r) => (
           <div key={r.key} className="mt-5">
-            <p className="mb-2 font-mono text-2xs uppercase tracking-widest text-mute">{r.label}</p>
+            <p className="mb-2 font-mono text-[8px] text-mute">{r.label}</p>
             <div className="flex flex-wrap gap-1">
               {r.opts.map((o) => (
                 <button
                   key={o.id}
                   onClick={() => set(r.key, o.id)}
                   className={cn(
-                    "border px-2 py-1 font-mono text-3xs uppercase tracking-wide",
+                    "border px-2 py-1 font-mono text-[8px] uppercase",
                     traits[r.key] === o.id ? "border-acid text-acid" : "border-line text-mute",
                   )}
                 >

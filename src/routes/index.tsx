@@ -15,12 +15,14 @@ function Home() {
     <Shell>
       <section className="grid items-center gap-10 pb-16 md:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <p className="font-mono text-2xs uppercase tracking-[0.28em] text-acid">The vat is open</p>
-          <h1 className="mt-4 font-display text-5xl font-semibold leading-[0.95] tracking-tight md:text-7xl">
-            Mutate Your Cats
-            <span className="block text-mute">: KILI</span>
+          <p className="font-mono text-[8px] text-acid">THE VAT IS OPEN</p>
+          <h1 className="mt-4 font-mono text-[18px] leading-[1.7] text-fg md:text-[28px]">
+            MUTATE
+            <br />
+            YOUR CATS
+            <span className="mt-2 block text-mute">: KILI</span>
           </h1>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-mute">
+          <p className="mt-6 max-w-md font-sans text-[22px] leading-tight text-mute">
             A cat is four organs. Mix two. Fifty-fifty. Six percent mutant. Coat mismatch: chimera. Keep
             the wrong ones.
           </p>
@@ -36,16 +38,16 @@ function Home() {
           </div>
           <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-line pt-6">
             <div>
-              <dt className="font-mono text-3xs uppercase tracking-widest text-mute">Ticker</dt>
-              <dd className="mt-1 font-display text-lg">$KILI</dd>
+              <dt className="font-mono text-[8px] text-mute">TICKER</dt>
+              <dd className="mt-1 font-mono text-[12px]">$KILI</dd>
             </div>
             <div>
-              <dt className="font-mono text-3xs uppercase tracking-widest text-mute">Swap tax</dt>
-              <dd className="mt-1 font-display text-lg">{FEE.totalBps / 100}%</dd>
+              <dt className="font-mono text-[8px] text-mute">SWAP TAX</dt>
+              <dd className="mt-1 font-mono text-[12px]">{FEE.totalBps / 100}%</dd>
             </div>
             <div>
-              <dt className="font-mono text-3xs uppercase tracking-widest text-mute">Chain id</dt>
-              <dd className="mt-1 font-display text-lg">{CHAIN_ID}</dd>
+              <dt className="font-mono text-[8px] text-mute">CHAIN ID</dt>
+              <dd className="mt-1 font-mono text-[12px]">{CHAIN_ID}</dd>
             </div>
           </dl>
         </div>
@@ -56,8 +58,8 @@ function Home() {
 
       <section>
         <div className="mb-6 flex items-end justify-between">
-          <h2 className="font-display text-2xl">Founders</h2>
-          <p className="font-mono text-2xs uppercase tracking-widest text-mute">Seven coats. Six named lines.</p>
+          <h2 className="font-mono text-[12px]">FOUNDERS</h2>
+          <p className="font-mono text-[8px] text-mute">7 COATS · 6 LINES</p>
         </div>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7">
           {FOUNDERS.map((f) => (
@@ -66,8 +68,8 @@ function Home() {
                 <FounderPixel id={f.id} className="h-full w-full" />
               </div>
               <figcaption className="px-2 py-2">
-                <div className="font-display text-sm">{f.name}</div>
-                <div className="font-mono text-3xs uppercase tracking-widest text-mute">{f.line}</div>
+                <div className="font-mono text-[9px]">{f.name}</div>
+                <div className="font-mono text-[8px] text-mute">{f.line}</div>
               </figcaption>
             </figure>
           ))}
@@ -93,9 +95,9 @@ function Home() {
           },
         ].map((c) => (
           <article key={c.k} className="border border-line bg-panel p-5">
-            <p className="font-mono text-3xs uppercase tracking-[0.2em] text-acid">{c.k}</p>
-            <h3 className="mt-3 font-display text-xl">{c.t}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-mute">{c.d}</p>
+            <p className="font-mono text-[8px] text-acid">{c.k}</p>
+            <h3 className="mt-3 font-mono text-[11px] leading-relaxed">{c.t}</h3>
+            <p className="mt-2 font-sans text-[20px] leading-tight text-mute">{c.d}</p>
           </article>
         ))}
       </section>
@@ -103,8 +105,8 @@ function Home() {
       <section className="mt-16 border border-line bg-panel p-6 md:p-8">
         <div className="flex flex-wrap items-start justify-between gap-6">
           <div>
-            <h2 className="font-display text-2xl">3% creator fee · PAIR V2</h2>
-            <p className="mt-2 max-w-lg text-sm text-mute">
+            <h2 className="font-mono text-[12px] leading-relaxed">3% CREATOR FEE</h2>
+            <p className="mt-2 max-w-lg font-sans text-[20px] leading-tight text-mute">
               Uniswap V4, LP locked, 1B minted once. Mix fee 0.0003 ETH hits The Vat, never an operator
               EOA. Launch on{" "}
               <a className="text-acid underline-offset-2 hover:underline" href={LINKS.pair} target="_blank" rel="noreferrer">
@@ -120,15 +122,15 @@ function Home() {
         <div className="mt-6 grid gap-px bg-line sm:grid-cols-3">
           {FEE_SHARE.map((s) => (
             <div key={s.id} className="bg-bg p-4">
-              <div className="font-mono text-lg text-acid">{s.swapPct}</div>
-              <div className="mt-1 font-display">{s.label}</div>
-              <div className="mt-1 font-mono text-3xs uppercase tracking-widest text-mute">{s.dest}</div>
+              <div className="font-mono text-[14px] text-acid">{s.swapPct}</div>
+              <div className="mt-1 font-mono text-[10px]">{s.label}</div>
+              <div className="mt-1 font-mono text-[8px] text-mute">{s.dest}</div>
             </div>
           ))}
         </div>
       </section>
 
-      <p className="mt-10 font-mono text-2xs uppercase tracking-[0.18em] text-mute">
+      <p className="mt-10 font-mono text-[8px] leading-relaxed text-mute">
         {wallet ? "Lab session live — mix is local until Nursery." : "Enter lab to seed two founders."} ·
         www.kili.lol · @{`kili_RH`}
       </p>

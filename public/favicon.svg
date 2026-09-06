@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#070807"/>
-  <path fill="#A5FA00" d="M7 5h7v8.2L21.4 5H27L18.2 16 27 27h-5.6L14 18.8V27H7z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <rect width="16" height="16" fill="#070807"/>
+  <rect x="4" y="1" width="2" height="2" fill="#A5FA00"/>
+  <rect x="10" y="1" width="2" height="2" fill="#A5FA00"/>
+  <rect x="3" y="3" width="10" height="8" fill="#A5FA00"/>
+  <rect x="5" y="5" width="2" height="2" fill="#070807"/>
+  <rect x="9" y="5" width="2" height="2" fill="#070807"/>
+  <rect x="7" y="8" width="2" height="1" fill="#070807"/>
+  <rect x="4" y="11" width="3" height="4" fill="#A5FA00"/>
+  <rect x="9" y="11" width="3" height="4" fill="#A5FA00"/>
 </svg>
