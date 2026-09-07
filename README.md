@@ -4,6 +4,9 @@ Ticker **$KILI**. Nursery unit **KIT**. Site [www.kili.lol](https://www.kili.lol
 
 A cat is four organs. Mix two. Fifty-fifty. Six percent mutant. Coat mismatch: chimera. Keep the wrong ones.
 
+Sonraki proje: mekanik ve aşamalar [PLAYBOOK.md](./PLAYBOOK.md).
+
+
 ## Stack
 
 - Site: TanStack Start, React 19, Tailwind v4 — Vercel preset **TanStack Start**
